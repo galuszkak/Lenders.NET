@@ -8,3 +8,13 @@ C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Debug\Lend
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Debug\Lenders.MainForm.resources
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Lenders\Lenders\Lenders\bin\Debug\Lenders.exe.config
+D:\Lenders\Lenders\Lenders\bin\Debug\Lenders.exe
+D:\Lenders\Lenders\Lenders\bin\Debug\Lenders.pdb
+D:\Lenders\Lenders\Lenders\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Lenders\Lenders\Lenders\obj\x86\Debug\Lenders.AddDialog.resources
+D:\Lenders\Lenders\Lenders\obj\x86\Debug\Lenders.MainForm.resources
+D:\Lenders\Lenders\Lenders\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Lenders\Lenders\Lenders\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Lenders\Lenders\Lenders\obj\x86\Debug\Lenders.exe
+D:\Lenders\Lenders\Lenders\obj\x86\Debug\Lenders.pdb

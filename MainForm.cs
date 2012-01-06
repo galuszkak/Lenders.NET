@@ -85,5 +85,10 @@ namespace Lenders
 			}
 			}
 		}
+		
+		void RecordsToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }
