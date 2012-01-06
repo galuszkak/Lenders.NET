@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Db4objects.Db4o">
+      <HintPath>..\..\..\..\..\..\Program Files %28x86%29\db4o\db4o-8.0\bin\net-4.0\Db4objects.Db4o.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -51,12 +54,17 @@
     <Compile Include="AddDialog.Designer.cs">
       <DependentUpon>AddDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemType.cs" />
+    <Compile Include="Lender.cs" />
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Place.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingletonClass1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
