@@ -1,0 +1,10 @@
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Debug\Lenders.exe.config
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Debug\Lenders.exe
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Debug\Lenders.pdb
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Debug\Lenders.exe
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Debug\Lenders.pdb
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Debug\Lenders.AddDialog.resources
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Debug\Lenders.MainForm.resources
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Debug\GenerateResource.write.1.tlog
