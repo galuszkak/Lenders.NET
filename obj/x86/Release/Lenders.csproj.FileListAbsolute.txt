@@ -6,3 +6,4 @@ C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Le
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\GenerateResource.read.1.tlog
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\GenerateResource.write.1.tlog
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.exe
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.AddPeopleDialog.resources

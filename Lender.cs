@@ -13,14 +13,15 @@ namespace Lenders
 	/// <summary>
 	/// Description of Lender.
 	/// </summary>
-	string fname;
-	string lname;
-	DateTime date;
-	string city;
-	string address;
 
 	public class Lender
 	{
+		string fname;
+		string lname;
+		DateTime date;
+		string city;
+		string address;
+
 		public Lender()
 		{
 		}

@@ -15,13 +15,13 @@ namespace Lenders
 	/// </summary>
 	public class Item
 	{
-			ItemType _type;
-			string _title
-			DateTime _buy_date
-			DateTime _borrow_date
-			bool _is_borrow
-			float _price;
-			Place _place;
+		ItemType _type;
+		string _title;
+		DateTime _buy_date;
+		DateTime _borrow_date;
+		bool _is_borrow;
+		float _price;
+		Place _place;
 		public Item()
 		{
 			
