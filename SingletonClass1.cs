@@ -20,7 +20,7 @@ namespace Lenders
 		private static DBConnection instance = new DBConnection();
 		private DBConnection()
 		{
-			_db = new Db4oEmbedded.OpenFile("base.db");
+			_db = Db4oEmbedded.OpenFile("base.db");
 		}
 		public static DBConnection Instance {
 			get {

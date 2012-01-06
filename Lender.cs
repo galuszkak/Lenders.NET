@@ -16,14 +16,19 @@ namespace Lenders
 
 	public class Lender
 	{
-		string fname;
-		string lname;
-		DateTime date;
-		string city;
-		string address;
+		string _fname;
+		string _lname;
+		DateTime _birth_date;
+		string _city;
+		string _address;
 
-		public Lender()
+		public Lender(string fname, string lname, DateTime birth_date, string city, string address)
 		{
+			_fname = fname;
+			_lname = lname;
+			_birth_date = birth_date;
+			_city = city;
+			_address = address;
 		}
 	}
 }
