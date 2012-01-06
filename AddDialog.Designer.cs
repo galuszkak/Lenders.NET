@@ -57,39 +57,39 @@ namespace Lenders
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(117, 17);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Typ";
+			this.label1.Text = "Type";
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(12, 54);
+			this.label2.Location = new System.Drawing.Point(12, 41);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(117, 17);
 			this.label2.TabIndex = 1;
-			this.label2.Text = "Tytuł";
+			this.label2.Text = "Title";
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(12, 99);
+			this.label3.Location = new System.Drawing.Point(12, 80);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(117, 17);
+			this.label3.Size = new System.Drawing.Size(96, 17);
 			this.label3.TabIndex = 2;
-			this.label3.Text = "Data Zakupu";
+			this.label3.Text = "Date of purchase";
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(12, 144);
+			this.label4.Location = new System.Drawing.Point(12, 114);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(117, 17);
+			this.label4.Size = new System.Drawing.Size(88, 17);
 			this.label4.TabIndex = 3;
-			this.label4.Text = "Wartość";
+			this.label4.Text = "Value";
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(12, 189);
+			this.label5.Location = new System.Drawing.Point(12, 149);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(117, 17);
+			this.label5.Size = new System.Drawing.Size(75, 17);
 			this.label5.TabIndex = 4;
-			this.label5.Text = "Miejsce";
+			this.label5.Text = "Place";
 			// 
 			// TypeBox
 			// 
@@ -101,21 +101,21 @@ namespace Lenders
 									"Video",
 									"Płyty",
 									"Gry"});
-			this.TypeBox.Location = new System.Drawing.Point(135, 5);
+			this.TypeBox.Location = new System.Drawing.Point(111, 5);
 			this.TypeBox.Name = "TypeBox";
 			this.TypeBox.Size = new System.Drawing.Size(134, 21);
 			this.TypeBox.TabIndex = 5;
 			// 
 			// TitleBox
 			// 
-			this.TitleBox.Location = new System.Drawing.Point(134, 51);
+			this.TitleBox.Location = new System.Drawing.Point(111, 41);
 			this.TitleBox.Name = "TitleBox";
 			this.TitleBox.Size = new System.Drawing.Size(134, 20);
 			this.TitleBox.TabIndex = 6;
 			// 
 			// BuyDatePicker
 			// 
-			this.BuyDatePicker.Location = new System.Drawing.Point(134, 99);
+			this.BuyDatePicker.Location = new System.Drawing.Point(111, 76);
 			this.BuyDatePicker.Name = "BuyDatePicker";
 			this.BuyDatePicker.Size = new System.Drawing.Size(133, 20);
 			this.BuyDatePicker.TabIndex = 7;
@@ -128,7 +128,7 @@ namespace Lenders
 									0,
 									0,
 									65536});
-			this.Price.Location = new System.Drawing.Point(134, 141);
+			this.Price.Location = new System.Drawing.Point(111, 111);
 			this.Price.Name = "Price";
 			this.Price.Size = new System.Drawing.Size(134, 20);
 			this.Price.TabIndex = 8;
@@ -140,7 +140,7 @@ namespace Lenders
 			this.PlaceBox.Items.AddRange(new object[] {
 									"Półka 1",
 									"Półka 2"});
-			this.PlaceBox.Location = new System.Drawing.Point(134, 185);
+			this.PlaceBox.Location = new System.Drawing.Point(111, 146);
 			this.PlaceBox.Name = "PlaceBox";
 			this.PlaceBox.Size = new System.Drawing.Size(133, 21);
 			this.PlaceBox.TabIndex = 9;
@@ -148,28 +148,28 @@ namespace Lenders
 			// OK
 			// 
 			this.OK.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.OK.Location = new System.Drawing.Point(183, 227);
+			this.OK.Location = new System.Drawing.Point(169, 195);
 			this.OK.Name = "OK";
 			this.OK.Size = new System.Drawing.Size(75, 23);
 			this.OK.TabIndex = 10;
-			this.OK.Text = "Dodaj";
+			this.OK.Text = "Add";
 			this.OK.UseVisualStyleBackColor = true;
 			// 
 			// Cancel
 			// 
 			this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.Cancel.Location = new System.Drawing.Point(92, 227);
+			this.Cancel.Location = new System.Drawing.Point(78, 195);
 			this.Cancel.Name = "Cancel";
 			this.Cancel.Size = new System.Drawing.Size(75, 23);
 			this.Cancel.TabIndex = 11;
-			this.Cancel.Text = "Anuluj";
+			this.Cancel.Text = "Cancel";
 			this.Cancel.UseVisualStyleBackColor = true;
 			// 
 			// AddDialog
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(284, 262);
+			this.ClientSize = new System.Drawing.Size(293, 245);
 			this.Controls.Add(this.Cancel);
 			this.Controls.Add(this.OK);
 			this.Controls.Add(this.PlaceBox);
