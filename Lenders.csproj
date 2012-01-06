@@ -51,12 +51,24 @@
     <Compile Include="AddDialog.Designer.cs">
       <DependentUpon>AddDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddPeopleDialog.cs" />
+    <Compile Include="AddPeopleDialog.Designer.cs">
+      <DependentUpon>AddPeopleDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageItemDialog.cs" />
+    <Compile Include="ManageItemDialog.Designer.cs">
+      <DependentUpon>ManageItemDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveItemDialog.cs" />
+    <Compile Include="RemoveItemDialog.Designer.cs">
+      <DependentUpon>RemoveItemDialog.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -64,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AddDialog.resx">
       <DependentUpon>AddDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPeopleDialog.resx">
+      <DependentUpon>AddPeopleDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
