@@ -16,11 +16,24 @@ namespace Lenders
 	/// </summary>
 	public sealed class DBConnection
 	{
-		private IObjectContainer _db;
+		private static IObjectContainer _db;
 		private static DBConnection instance = new DBConnection();
-		private DBConnection()
-		{
-			_db = Db4oEmbedded.OpenFile("base.db");
+		private DBConnection(){
+			_db = Db4oEmbedded.OpenFile(@"database.db");
+		}
+		public IObjectContainer DB{
+			get {
+				return _db;
+			}
+		}
+		public static void setDatabase(string path){
+			if(_db != null){
+				_db.Close();
+			}
+			_db = Db4oEmbedded.OpenFile(path);
+		}
+		public static void Close(){
+			_db.Close();
 		}
 		public static DBConnection Instance {
 			get {

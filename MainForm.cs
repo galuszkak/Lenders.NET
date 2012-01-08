@@ -38,6 +38,7 @@ namespace Lenders
 			
 			if(dlg.ShowDialog() == DialogResult.OK)
 			{
+				
 				ListViewItem lvi = new ListViewItem();
 				lvi.Text = dlg.TypeBox.Text;
 				lvi.SubItems.Add(dlg.TitleBox.Text);
@@ -69,20 +70,7 @@ namespace Lenders
 			
 			if (dlg.ShowDialog() == DialogResult.OK)
 			{
-							
-			String[] filetext = File.ReadAllLines(dlg.FileName);
-			listView1.Items.Clear();
-			foreach(string text in filetext)
-			{
-				string[] line = text.Split(';');
-				ListViewItem lvi = new ListViewItem();
-				lvi.Text = line[0];
-				lvi.SubItems.Add(line[1]);
-				lvi.SubItems.Add(line[2]);
-				lvi.SubItems.Add(line[3]);
-				lvi.SubItems.Add(line[4]);
-				listView1.Items.Add(lvi);
-			}
+				DBConnection.setDatabase(dlg.FileName);
 			}
 		}
 		

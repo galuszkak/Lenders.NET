@@ -30,5 +30,46 @@ namespace Lenders
 			_city = city;
 			_address = address;
 		}
+		public string FirstName{
+			get {
+				return _fname;
+			}
+			set{
+				_fname = value;
+			}
+		}
+		public string LastName{
+			get {
+				return _lname;
+			}
+			set{
+				_lname = value;
+			}
+			
+		}
+		public DateTime BirthDate{
+			get{
+				return _birth_date;
+			}
+			set{
+				_birth_date = value;
+			}
+		}
+		public string City{
+			get{
+				return _city;
+			}
+			set{
+				_city = value;
+			}
+		}
+		public string Address{
+			get{
+				return _address;
+			}
+			set{
+				_address = value;
+			}
+		}
 	}
 }
