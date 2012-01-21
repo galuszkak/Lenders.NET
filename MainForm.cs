@@ -91,9 +91,11 @@ namespace Lenders
 			{
 				String firstname = dlg.firstname.Text;
 				String lastname = dlg.lastname.Text;
-			//	String dateofbirth = dlg.dateTimePicker1
+				DateTime dateofbirth = dlg.dateTimePicker1.Value;
+				String city = dlg.city.Text;
+				String address = dlg.address.Text;
 				IObjectContainer db = DBConnection.Instance.DB;
-			//	db.Store(new Lender());
+				db.Store(new Lender(firstname,lastname,DateTime,city,address));
 			}
 		}
 		
