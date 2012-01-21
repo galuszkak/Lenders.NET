@@ -46,6 +46,7 @@ namespace Lenders
 				lvi.SubItems.Add(dlg.Price.Text);
 				lvi.SubItems.Add(dlg.PlaceBox.Text);
 				listView1.Items.Add(lvi);
+			//	DBConnection.Instance().db.
 			}
 		}
 	
@@ -78,6 +79,30 @@ namespace Lenders
 		void RecordsToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			
+		}
+		
+		void AddToolStripMenuItem1Click(object sender, EventArgs e)
+		{
+			AddPeopleDialog dlg = new AddPeopleDialog();
+			dlg.ShowDialog();
+		}
+		
+		void ListView1SelectedIndexChanged(object sender, EventArgs e)
+		{
+			
+			
+		}
+		
+		void ManageToolStripMenuItem1Click(object sender, EventArgs e)
+		{
+			ManageItemDialog dlg = new ManageItemDialog();
+			dlg.ShowDialog();
+		}
+		
+		void ManageToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			ManagePeopleDialog dlg = new ManagePeopleDialog();
+			dlg.ShowDialog();
 		}
 	}
 }
