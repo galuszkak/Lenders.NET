@@ -10,6 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using Db4objects;
+using Db4objects.Db4o.Linq;
+using System.Linq;
 
 namespace Lenders
 {
@@ -33,15 +36,14 @@ namespace Lenders
 		
 		void PeopleListDialogLoad(object sender, EventArgs e)
 		{
-			//IEnumerable<Lender> lenders = from Lender l in DBConnection.Instance.DB select l;
-			/*		IEnumerable<ItemType> items = from ItemType i in DBConnection.Instance.DB select i;
+			IEnumerable<Lender> lenders = from Lender l in DBConnection.Instance.DB select l;
+			/*IEnumerable<ItemType> items = from ItemType i in DBConnection.Instance.DB select i;
 			ItemType[] items_type = items.Cast<ItemType>().ToArray();
 			object[] items_object = new object[items_type.Length];*/
-			/*Lender[] lender = items.Cast<ItemType>().ToArray();
-			object[] items_object = new object[items_type.Length];
-			for(int i=0; i< items_type.Length; i++ ){
-				items_object[i] = items_type[i].Name;
-			}*/
+			Lender[] people = lenders.Cast<Lender>().ToArray();
+			for(int i=0; i< people.Length; i++ ){
+			//	listView1.Items.Add(people[i]);
+			}
 			
 		}
 	}
