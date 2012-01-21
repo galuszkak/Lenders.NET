@@ -97,9 +97,9 @@ namespace Lenders
 		
 		void AddToolStripMenuItem1Click(object sender, EventArgs e)
 		{
-			AddPeopleDialog dlg = new AddPeopleDialog();
-			if (dlg.ShowDialog() == DialogResult.OK)
-			{
+				AddPeopleDialog dlg = new AddPeopleDialog();
+				if (dlg.ShowDialog() == DialogResult.OK)
+				{
 				String firstname = dlg.firstname.Text;
 				String lastname = dlg.lastname.Text;
 				DateTime dateofbirth = dlg.dateTimePicker1.Value;
@@ -107,7 +107,7 @@ namespace Lenders
 				String address = dlg.address.Text;
 				IObjectContainer db = DBConnection.Instance.DB;
 				db.Store(new Lender(firstname,lastname,dateofbirth,city,address));
-			}
+				}
 		}
 		
 		void ListView1SelectedIndexChanged(object sender, EventArgs e)
@@ -126,13 +126,19 @@ namespace Lenders
 		
 		void ManageToolStripMenuItemClick(object sender, EventArgs e)
 		{
-			ManagePeopleDialog dlg = new ManagePeopleDialog();
-			if (dlg.ShowDialog() == DialogResult.OK)
+			PeopleListDialog dlg2 = new PeopleListDialog();
+			if (dlg2.ShowDialog() == DialogResult.OK)
 			{
-			 /*	String firstname = dlg.firstname.Text;
-			 	IObjectContainer db = DBConnection.Instance.DB;
-			 	db.Store(new Lender(firstname)); */
-			 	
+				ManagePeopleDialog dlg = new ManagePeopleDialog();
+				if (dlg.ShowDialog() == DialogResult.OK)
+				{
+					String item = dlg2.listView1.SelectedItems.ToString();
+					dlg.address.Text = item;
+					
+					
+					
+					
+				}
 			}
 		}
 		

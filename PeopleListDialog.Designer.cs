@@ -64,22 +64,27 @@ namespace Lenders
 			// columnHeader1
 			// 
 			this.columnHeader1.Text = "First Name";
+			this.columnHeader1.Width = 103;
 			// 
 			// columnHeader2
 			// 
 			this.columnHeader2.Text = "Last Name";
+			this.columnHeader2.Width = 93;
 			// 
 			// columnHeader3
 			// 
 			this.columnHeader3.Text = "Date of birth";
+			this.columnHeader3.Width = 109;
 			// 
 			// columnHeader4
 			// 
 			this.columnHeader4.Text = "City";
+			this.columnHeader4.Width = 114;
 			// 
 			// columnHeader5
 			// 
 			this.columnHeader5.Text = "Address";
+			this.columnHeader5.Width = 96;
 			// 
 			// button1
 			// 
@@ -90,6 +95,7 @@ namespace Lenders
 			this.button1.TabIndex = 1;
 			this.button1.Text = "OK";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
 			// 
 			// button2
 			// 
@@ -121,6 +127,6 @@ namespace Lenders
 		private System.Windows.Forms.ColumnHeader columnHeader3;
 		private System.Windows.Forms.ColumnHeader columnHeader2;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
-		private System.Windows.Forms.ListView listView1;
+		public System.Windows.Forms.ListView listView1;
 	}
 }

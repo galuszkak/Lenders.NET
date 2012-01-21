@@ -36,14 +36,21 @@ namespace Lenders
 		void PeopleListDialogLoad(object sender, EventArgs e)
 		{
 			IEnumerable<Lender> lenders = from Lender l in DBConnection.Instance.DB select l;
-			/*IEnumerable<ItemType> items = from ItemType i in DBConnection.Instance.DB select i;
-			ItemType[] items_type = items.Cast<ItemType>().ToArray();
-			object[] items_object = new object[items_type.Length];*/
-			Lender[] people = lenders.Cast<Lender>().ToArray();
-			for(int i=0; i< people.Length; i++ ){
-			//	listView1.Items.Add(people[i]);
-			}
+				foreach(Lender lender in lenders)
+				{
+					ListViewItem lvItem  = new ListViewItem(lender.FirstName);
+					lvItem.SubItems.Add(lender.LastName);
+					lvItem.SubItems.Add(lender.BirthDate.ToString());
+					lvItem.SubItems.Add(lender.City);
+					lvItem.SubItems.Add(lender.Address);
+					listView1.Items.Add(lvItem);
+				}
 			
+		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
