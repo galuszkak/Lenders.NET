@@ -25,7 +25,7 @@ namespace Lenders
 		{
 			get
 			{
-				return _name	
+				return _name;	
 			}
 		}
 	}

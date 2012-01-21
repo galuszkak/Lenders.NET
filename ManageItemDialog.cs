@@ -28,5 +28,15 @@ namespace Lenders
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+		void OKClick(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }

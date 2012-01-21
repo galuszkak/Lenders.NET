@@ -46,14 +46,13 @@ namespace Lenders
 			this.manageToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.peopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.listView1 = new System.Windows.Forms.ListView();
 			this.Type = new System.Windows.Forms.ColumnHeader();
 			this.Title = new System.Windows.Forms.ColumnHeader();
-			this.BuyDate = new System.Windows.Forms.ColumnHeader();
-			this.Price = new System.Windows.Forms.ColumnHeader();
-			this.Place = new System.Windows.Forms.ColumnHeader();
+			this.DateOfPurchase = new System.Windows.Forms.ColumnHeader();
+			this.Value = new System.Windows.Forms.ColumnHeader();
+	//		this.Place = new System.Windows.Forms.ColumnHeader();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -65,7 +64,7 @@ namespace Lenders
 									this.peopleToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(520, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(519, 24);
 			this.menuStrip1.TabIndex = 0;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -126,7 +125,6 @@ namespace Lenders
 			// 
 			this.peopleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.addToolStripMenuItem1,
-									this.removeToolStripMenuItem,
 									this.manageToolStripMenuItem});
 			this.peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
 			this.peopleToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
@@ -135,20 +133,14 @@ namespace Lenders
 			// addToolStripMenuItem1
 			// 
 			this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
-			this.addToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+			this.addToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
 			this.addToolStripMenuItem1.Text = "Add";
 			this.addToolStripMenuItem1.Click += new System.EventHandler(this.AddToolStripMenuItem1Click);
-			// 
-			// removeToolStripMenuItem
-			// 
-			this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-			this.removeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.removeToolStripMenuItem.Text = "Remove";
 			// 
 			// manageToolStripMenuItem
 			// 
 			this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-			this.manageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.manageToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
 			this.manageToolStripMenuItem.Text = "Manage";
 			// 
 			// listView1
@@ -156,9 +148,10 @@ namespace Lenders
 			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
 									this.Type,
 									this.Title,
-									this.BuyDate,
-									this.Price,
-									this.Place});
+									this.DateOfPurchase,
+									this.Value,
+								//	this.Place
+			                                });
 			this.listView1.FullRowSelect = true;
 			this.listView1.Location = new System.Drawing.Point(0, 27);
 			this.listView1.Name = "listView1";
@@ -166,37 +159,38 @@ namespace Lenders
 			this.listView1.TabIndex = 2;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
+			this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1SelectedIndexChanged);
 			// 
 			// Type
 			// 
-			this.Type.Text = "Typ";
+			this.Type.Text = "Type";
 			this.Type.Width = 80;
 			// 
 			// Title
 			// 
-			this.Title.Text = "Tytuł";
+			this.Title.Text = "Title";
 			this.Title.Width = 120;
 			// 
-			// BuyDate
+			// DateOfPurchase
 			// 
-			this.BuyDate.Text = "Data zakupu";
-			this.BuyDate.Width = 107;
+			this.DateOfPurchase.Text = "Date of purchase";
+			this.DateOfPurchase.Width = 107;
 			// 
-			// Price
+			// Value
 			// 
-			this.Price.Text = "Wartość";
-			this.Price.Width = 103;
+			this.Value.Text = "Value";
+			this.Value.Width = 103;
 			// 
 			// Place
 			// 
-			this.Place.Text = "Miejsce";
-			this.Place.Width = 103;
+		//	this.Place.Text = "Place";
+		//	this.Place.Width = 103;
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(520, 262);
+			this.ClientSize = new System.Drawing.Size(519, 252);
 			this.Controls.Add(this.listView1);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
@@ -207,23 +201,37 @@ namespace Lenders
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem recordsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+		private System.Windows.Forms.ListView listView1;
+		private System.Windows.Forms.ColumnHeader Type;
+		private System.Windows.Forms.ColumnHeader Title;
+		private System.Windows.Forms.ColumnHeader DateOfPurchase;
+		private System.Windows.Forms.ColumnHeader Value;
 		private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem peopleToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-		private System.Windows.Forms.ColumnHeader Place;
-		private System.Windows.Forms.ColumnHeader Price;
+	/*	private System.Windows.Forms.ColumnHeader Place;
+ 		private System.Windows.Forms.ColumnHeader
+
+
+
+
+
+e;
 		private System.Windows.Forms.ColumnHeader BuyDate;
 		private System.Windows.Forms.ColumnHeader Title;
-		private System.Windows.Forms.ColumnHeader Type;
+		private System.Windows.Forms.ColumnHeader Type; 
 		private System.Windows.Forms.ListView listView1;
 		private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem recordsToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.MenuStrip menuStrip1; */
 	}
 }

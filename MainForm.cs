@@ -97,5 +97,10 @@ namespace Lenders
 			AddPeopleDialog dlg = new AddPeopleDialog();
 			dlg.ShowDialog();
 		}
+		
+		void ListView1SelectedIndexChanged(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }
