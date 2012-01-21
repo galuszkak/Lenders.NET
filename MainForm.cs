@@ -101,6 +101,19 @@ namespace Lenders
 		void ListView1SelectedIndexChanged(object sender, EventArgs e)
 		{
 			
+			
+		}
+		
+		void ManageToolStripMenuItem1Click(object sender, EventArgs e)
+		{
+			ManageItemDialog dlg = new ManageItemDialog();
+			dlg.ShowDialog();
+		}
+		
+		void ManageToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			ManagePeopleDialog dlg = new ManagePeopleDialog();
+			dlg.ShowDialog();
 		}
 	}
 }
