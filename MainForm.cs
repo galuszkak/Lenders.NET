@@ -87,7 +87,15 @@ namespace Lenders
 		void AddToolStripMenuItem1Click(object sender, EventArgs e)
 		{
 			AddPeopleDialog dlg = new AddPeopleDialog();
-			dlg.ShowDialog();
+			AddItemTypeDialog dlg = new AddItemTypeDialog();
+			if (dlg.ShowDialog() == DialogResult.OK)
+			{
+				String firstname = dlg.firstname.Text;
+				String lastname = dlg.lastname.Text;
+			//	String dateofbirth = dlg.dateTimePicker1
+				IObjectContainer db = DBConnection.Instance.DB;
+				db.Store(new Lender();
+			}
 		}
 		
 		void ListView1SelectedIndexChanged(object sender, EventArgs e)
@@ -107,7 +115,24 @@ namespace Lenders
 		void ManageToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			ManagePeopleDialog dlg = new ManagePeopleDialog();
-			dlg.ShowDialog();
+			if (dlg.ShowDialog() == DialogResult.OK)
+			{
+			 /*	String firstname = dlg.firstname.Text;
+			 	IObjectContainer db = DBConnection.Instance.DB;
+			 	db.Store(new Lender(firstname)); */
+			 	
+			}
+		}
+		
+		void AddItemTypeToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			AddItemTypeDialog dlg = new AddItemTypeDialog();
+			if (dlg.ShowDialog() == DialogResult.OK)
+			{
+				String itemtype = dlg.textBox1.Text;
+				IObjectContainer db = DBConnection.Instance.DB;
+				db.Store(new ItemType(itemtype));
+			}
 		}
 	}
 }
