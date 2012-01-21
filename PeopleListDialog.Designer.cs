@@ -111,6 +111,7 @@ namespace Lenders
 			this.Controls.Add(this.listView1);
 			this.Name = "PeopleListDialog";
 			this.Text = "Choose person";
+			this.Load += new System.EventHandler(this.PeopleListDialogLoad);
 			this.ResumeLayout(false);
 		}
 		private System.Windows.Forms.Button button2;
