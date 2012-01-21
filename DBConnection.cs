@@ -8,6 +8,7 @@
  */
 using System;
 using Db4objects.Db4o;
+using Db4objects.Db4o.Ext;
 
 namespace Lenders
 {
@@ -31,6 +32,12 @@ namespace Lenders
 				_db.Close();
 			}
 			_db = Db4oEmbedded.OpenFile(path);
+		}
+		public static void saveDatabase(string path){
+			if(_db != null){
+				IExtObjectContainer database = _db.Ext();
+				database.Backup(path);
+			}
 		}
 		public static void Close(){
 			_db.Close();

@@ -11,6 +11,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using System.Linq;
+using Db4objects.Db4o;
+using Db4objects.Db4o.Linq; 
 
 namespace Lenders
 {
@@ -19,14 +22,12 @@ namespace Lenders
 	/// </summary>
 	public partial class MainForm : Form
 	{
-		String filepath;
 		public MainForm()
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			this.filepath = @"D:\filess.txt";
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
@@ -35,7 +36,6 @@ namespace Lenders
 		void AddToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			AddDialog dlg = new AddDialog();
-			
 			if(dlg.ShowDialog() == DialogResult.OK)
 			{
 				
@@ -52,25 +52,26 @@ namespace Lenders
 		
 		void SaveToolStripMenuItemClick(object sender, EventArgs e)
 		{
-			String filetext = "";
-			foreach(ListViewItem li in listView1.Items)
-			{
-				String line = li.Text+";"+li.SubItems[1].Text+";"+li.SubItems[2].Text+";"+li.SubItems[3].Text+";"+li.SubItems[4].Text+";"+System.Environment.NewLine;
-				filetext += line;
-			}
 			SaveFileDialog dlg = new SaveFileDialog();
 			if (dlg.ShowDialog() == DialogResult.OK){
-				File.WriteAllText(dlg.FileName, filetext);
+				DBConnection.saveDatabase(dlg.FileName);
 			}
 		}
 		
 		void OpenToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			OpenFileDialog dlg = new OpenFileDialog();
-			
 			if (dlg.ShowDialog() == DialogResult.OK)
 			{
 				DBConnection.setDatabase(dlg.FileName);
+				IObjectContainer db = DBConnection.Instance().DB();
+				IEnumerable<Item> items = from Item i in db
+									select i;
+				foreach(Item item in items)
+				{
+					ListViewItem lvItem  = new ListViewItem(item.type().Name);
+					listView1.Items.Add(lvItem);
+				}
 			}
 		}
 		
