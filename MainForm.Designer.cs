@@ -106,20 +106,20 @@ namespace Lenders
 			// addToolStripMenuItem
 			// 
 			this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-			this.addToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.addToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
 			this.addToolStripMenuItem.Text = "Add";
 			this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItemClick);
 			// 
 			// removeToolStripMenuItem1
 			// 
 			this.removeToolStripMenuItem1.Name = "removeToolStripMenuItem1";
-			this.removeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+			this.removeToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
 			this.removeToolStripMenuItem1.Text = "Remove";
 			// 
 			// manageToolStripMenuItem1
 			// 
 			this.manageToolStripMenuItem1.Name = "manageToolStripMenuItem1";
-			this.manageToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+			this.manageToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
 			this.manageToolStripMenuItem1.Text = "Manage";
 			// 
 			// peopleToolStripMenuItem
@@ -135,19 +135,20 @@ namespace Lenders
 			// addToolStripMenuItem1
 			// 
 			this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
-			this.addToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+			this.addToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
 			this.addToolStripMenuItem1.Text = "Add";
+			this.addToolStripMenuItem1.Click += new System.EventHandler(this.AddToolStripMenuItem1Click);
 			// 
 			// removeToolStripMenuItem
 			// 
 			this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-			this.removeToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+			this.removeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.removeToolStripMenuItem.Text = "Remove";
 			// 
 			// manageToolStripMenuItem
 			// 
 			this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-			this.manageToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+			this.manageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.manageToolStripMenuItem.Text = "Manage";
 			// 
 			// listView1

@@ -18,3 +18,6 @@ D:\Lenders\Lenders\Lenders\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\Lenders\Lenders\Lenders\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\Lenders\Lenders\Lenders\obj\x86\Debug\Lenders.exe
 D:\Lenders\Lenders\Lenders\obj\x86\Debug\Lenders.pdb
+D:\Lenders\Lenders\Lenders\bin\Debug\Db4objects.Db4o.dll
+D:\Lenders\Lenders\Lenders\bin\Debug\Db4objects.Db4o.xml
+D:\Lenders\Lenders\Lenders\obj\x86\Debug\Lenders.AddPeopleDialog.resources
