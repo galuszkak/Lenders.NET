@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Linq;
 using Db4objects.Db4o;
-using Db4objects.Db4o.Linq; 
+using Db4objects.Db4o.Linq;
 
 namespace Lenders
 {
@@ -65,12 +65,13 @@ namespace Lenders
 			if (dlg.ShowDialog() == DialogResult.OK)
 			{
 				DBConnection.setDatabase(dlg.FileName);
-				IObjectContainer db = DBConnection.Instance().DB();
+				IObjectContainer db = DBConnection.Instance.DB;
 				IEnumerable<Item> items = from Item i in db
 									select i;
 				foreach(Item item in items)
 				{
-					ListViewItem lvItem  = new ListViewItem(item.type().Name);
+					ListViewItem lvItem  = new ListViewItem(item.type.Name);
+					
 					listView1.Items.Add(lvItem);
 				}
 			}
