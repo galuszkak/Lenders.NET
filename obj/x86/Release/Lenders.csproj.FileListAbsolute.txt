@@ -22,3 +22,5 @@ C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4obj
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.NativeQueries.xml
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.Optional.xml
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.Instrumentation.xml
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.ManageItemDialog.resources
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.AddItemTypeDialog.resources

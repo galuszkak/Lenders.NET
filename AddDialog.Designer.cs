@@ -101,7 +101,11 @@ namespace Lenders
 			this.TypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.TypeBox.FormattingEnabled = true;
 			IEnumerable<ItemType> items = from ItemType i in DBConnection.Instance.DB select i;
-			object[] items_object = items.Cast<ItemType>().ToArray();
+			ItemType[] items_type = items.Cast<ItemType>().ToArray();
+			object[] items_object = new object[items_type.Length];
+			for(int i=0; i< items_type.Length; i++ ){
+				items_object[i] = items_type[i].Name;
+			}
 			this.TypeBox.Items.AddRange(items_object);
 			this.TypeBox.Location = new System.Drawing.Point(111, 5);
 			this.TypeBox.Name = "TypeBox";
