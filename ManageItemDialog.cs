@@ -9,6 +9,9 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Collections.Generic;
+using Db4objects.Db4o.Linq;
+using System.Linq;
 
 namespace Lenders
 {
@@ -27,6 +30,13 @@ namespace Lenders
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+			IEnumerable<ItemType> items = from ItemType i in DBConnection.Instance.DB select i;
+			ItemType[] items_type = items.Cast<ItemType>().ToArray();
+			object[] items_object = new object[items_type.Length];
+			for(int i=0; i< items_type.Length; i++ ){
+				items_object[i] = items_type[i].Name;
+			}
+			this.TypeBox.Items.AddRange(items_object);
 		}
 		
 		void OKClick(object sender, EventArgs e)
