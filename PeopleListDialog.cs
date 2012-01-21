@@ -31,6 +31,7 @@ namespace Lenders
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+
 		}
 		
 		void PeopleListDialogLoad(object sender, EventArgs e)

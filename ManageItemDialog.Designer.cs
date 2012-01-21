@@ -117,11 +117,6 @@ namespace Lenders
 			this.TypeBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.TypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.TypeBox.FormattingEnabled = true;
-			this.TypeBox.Items.AddRange(new object[] {
-									"Książka",
-									"Video",
-									"Płyty",
-									"Gry"});
 			this.TypeBox.Location = new System.Drawing.Point(111, 21);
 			this.TypeBox.Name = "TypeBox";
 			this.TypeBox.Size = new System.Drawing.Size(134, 21);
