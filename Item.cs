@@ -21,8 +21,8 @@ namespace Lenders
 		DateTime _borrow_date;
 		bool _is_borrow;
 		float _price;
-		Place _place;
-		public Item(ItemType type, string title, DateTime buy_date, DateTime borrow_date, bool is_borrow, float price, Place place)
+		string _place;
+		public Item(ItemType type, string title, DateTime buy_date, DateTime borrow_date, bool is_borrow, float price, string place)
 		{
 			_type = type;
 			_title = title;
@@ -80,6 +80,15 @@ namespace Lenders
 			set{
 				_price = value;
 			}
+		}
+		public string Place{
+			get{
+				return _place;
+			}
+			set{
+				_place = value;
+			}
+			
 		}
 	}
 }

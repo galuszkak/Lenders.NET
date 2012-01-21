@@ -28,11 +28,25 @@ namespace Lenders
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
+			this.refreshItems();
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		
+		void refreshItems(){
+			IEnumerable<Item> items = from Item i in DBConnection.Instance.DB select i;
+			
+			foreach(Item i in items){
+				ListViewItem lvi = new ListViewItem();
+				lvi.Text = i.type.Name;
+				lvi.SubItems.Add(i.Title);
+				lvi.SubItems.Add(i.BuyDate.ToString());
+				lvi.SubItems.Add(i.Price.ToString());
+				listView1.Items.Add(lvi);
+				
+			}
+			
+		}
 		void AddToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			AddDialog dlg = new AddDialog();
@@ -42,16 +56,8 @@ namespace Lenders
 				IObjectSet result = db.QueryByExample(new ItemType(dlg.TypeBox.Text));
 				ItemType item = (ItemType)result.Next();
 				DateTime data = dlg.BuyDatePicker.Value;
-				db.Store(new Item(item, dlg.TitleBox.Text, data, null, false, dlg.Price.Value,null));
-				
-			//	ListViewItem lvi = new ListViewItem();
-			//	lvi.Text = dlg.TypeBox.Text;
-			//	lvi.SubItems.Add(dlg.TitleBox.Text);
-			//	lvi.SubItems.Add(dlg.BuyDatePicker.Text);
-			//	lvi.SubItems.Add(dlg.Price.Text);
-			//	lvi.SubItems.Add(dlg.PlaceBox.Text);
-			//	listView1.Items.Add(lvi);
-			//	DBConnection.Instance().db.
+				db.Store(new Item(item, dlg.TitleBox.Text, data, data, false, (float)dlg.Price.Value,dlg.PlaceBox.Text));
+				this.refreshItems();
 			}
 		}
 	
