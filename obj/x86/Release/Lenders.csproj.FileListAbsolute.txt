@@ -7,3 +7,5 @@ C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Ge
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\GenerateResource.write.1.tlog
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.exe
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.AddPeopleDialog.resources
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.xml

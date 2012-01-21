@@ -16,8 +16,17 @@ namespace Lenders
 	public class Place
 	{
 		string _name;
-		public Place()
+		public Place(string name)
 		{
+			_name = name;
+		}
+		public string Name{
+			get{
+				return _name;
+			}
+			set{
+				_name = value;
+			}
 		}
 	}
 }
