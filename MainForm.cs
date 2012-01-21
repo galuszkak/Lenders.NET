@@ -87,14 +87,13 @@ namespace Lenders
 		void AddToolStripMenuItem1Click(object sender, EventArgs e)
 		{
 			AddPeopleDialog dlg = new AddPeopleDialog();
-			AddItemTypeDialog dlg = new AddItemTypeDialog();
 			if (dlg.ShowDialog() == DialogResult.OK)
 			{
 				String firstname = dlg.firstname.Text;
 				String lastname = dlg.lastname.Text;
 			//	String dateofbirth = dlg.dateTimePicker1
 				IObjectContainer db = DBConnection.Instance.DB;
-				db.Store(new Lender();
+			//	db.Store(new Lender());
 			}
 		}
 		
