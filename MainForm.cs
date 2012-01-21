@@ -100,7 +100,7 @@ namespace Lenders
 				String city = dlg.city.Text;
 				String address = dlg.address.Text;
 				IObjectContainer db = DBConnection.Instance.DB;
-				db.Store(new Lender(firstname,lastname,DateTime,city,address));
+				db.Store(new Lender(firstname,lastname,dateofbirth,city,address));
 			}
 		}
 		

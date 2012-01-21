@@ -7,6 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -27,6 +28,20 @@ namespace Lenders
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+		}
+		
+		void PeopleListDialogLoad(object sender, EventArgs e)
+		{
+			//IEnumerable<Lender> lenders = from Lender l in DBConnection.Instance.DB select l;
+			/*		IEnumerable<ItemType> items = from ItemType i in DBConnection.Instance.DB select i;
+			ItemType[] items_type = items.Cast<ItemType>().ToArray();
+			object[] items_object = new object[items_type.Length];*/
+			/*Lender[] lender = items.Cast<ItemType>().ToArray();
+			object[] items_object = new object[items_type.Length];
+			for(int i=0; i< items_type.Length; i++ ){
+				items_object[i] = items_type[i].Name;
+			}*/
+			
 		}
 	}
 }
