@@ -183,13 +183,13 @@ namespace Lenders
 		public System.Windows.Forms.DateTimePicker dateTimePicker1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button1;
-		privaaddressm.Windows.Forms.TecityxtBox3;
-		private System.Windows.Forms.TelastnamextBox2;
-		private System.Windows.Forms.TextBox firstname;
+//		private System.Windows.Forms.TextBox3;
+//		private System.Windows.Forms.TelastnamextBox2;
+/*		private System.Windows.Forms.TextBox firstname;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label1; */
 	}
 }
