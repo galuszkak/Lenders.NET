@@ -52,6 +52,7 @@ namespace Lenders
 			this.Title = new System.Windows.Forms.ColumnHeader();
 			this.DateOfPurchase = new System.Windows.Forms.ColumnHeader();
 			this.Value = new System.Windows.Forms.ColumnHeader();
+			this.addItemTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -79,14 +80,14 @@ namespace Lenders
 			// saveToolStripMenuItem
 			// 
 			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
 			this.saveToolStripMenuItem.Text = "Save";
 			this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItemClick);
 			// 
 			// openToolStripMenuItem
 			// 
 			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
 			this.openToolStripMenuItem.Text = "Open";
 			this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItemClick);
 			// 
@@ -95,7 +96,8 @@ namespace Lenders
 			this.recordsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.addToolStripMenuItem,
 									this.removeToolStripMenuItem1,
-									this.manageToolStripMenuItem1});
+									this.manageToolStripMenuItem1,
+									this.addItemTypeToolStripMenuItem});
 			this.recordsToolStripMenuItem.Name = "recordsToolStripMenuItem";
 			this.recordsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
 			this.recordsToolStripMenuItem.Text = "Items";
@@ -104,20 +106,20 @@ namespace Lenders
 			// addToolStripMenuItem
 			// 
 			this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-			this.addToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.addToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
 			this.addToolStripMenuItem.Text = "Add";
 			this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItemClick);
 			// 
 			// removeToolStripMenuItem1
 			// 
 			this.removeToolStripMenuItem1.Name = "removeToolStripMenuItem1";
-			this.removeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+			this.removeToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
 			this.removeToolStripMenuItem1.Text = "Remove";
 			// 
 			// manageToolStripMenuItem1
 			// 
 			this.manageToolStripMenuItem1.Name = "manageToolStripMenuItem1";
-			this.manageToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+			this.manageToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
 			this.manageToolStripMenuItem1.Text = "Manage";
 			this.manageToolStripMenuItem1.Click += new System.EventHandler(this.ManageToolStripMenuItem1Click);
 			// 
@@ -133,14 +135,14 @@ namespace Lenders
 			// addToolStripMenuItem1
 			// 
 			this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
-			this.addToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+			this.addToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
 			this.addToolStripMenuItem1.Text = "Add";
 			this.addToolStripMenuItem1.Click += new System.EventHandler(this.AddToolStripMenuItem1Click);
 			// 
 			// manageToolStripMenuItem
 			// 
 			this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-			this.manageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.manageToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
 			this.manageToolStripMenuItem.Text = "Manage";
 			this.manageToolStripMenuItem.Click += new System.EventHandler(this.ManageToolStripMenuItemClick);
 			// 
@@ -180,6 +182,13 @@ namespace Lenders
 			this.Value.Text = "Value";
 			this.Value.Width = 103;
 			// 
+			// addItemTypeToolStripMenuItem
+			// 
+			this.addItemTypeToolStripMenuItem.Name = "addItemTypeToolStripMenuItem";
+			this.addItemTypeToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+			this.addItemTypeToolStripMenuItem.Text = "Add Item Type";
+			this.addItemTypeToolStripMenuItem.Click += new System.EventHandler(this.AddItemTypeToolStripMenuItemClick);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,6 +204,7 @@ namespace Lenders
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripMenuItem addItemTypeToolStripMenuItem;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem recordsToolStripMenuItem;

@@ -39,10 +39,10 @@ namespace Lenders
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.address = new System.Windows.Forms.TextBox();
+			this.city = new System.Windows.Forms.TextBox();
+			this.lastname = new System.Windows.Forms.TextBox();
+			this.firstname = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -77,35 +77,36 @@ namespace Lenders
 			this.button1.TabIndex = 21;
 			this.button1.Text = "Add";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
 			// 
-			// textBox4
+			// address
 			// 
-			this.textBox4.Location = new System.Drawing.Point(126, 142);
-			this.textBox4.Multiline = true;
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(131, 57);
-			this.textBox4.TabIndex = 20;
+			this.address.Location = new System.Drawing.Point(126, 142);
+			this.address.Multiline = true;
+			this.address.Name = "address";
+			this.address.Size = new System.Drawing.Size(131, 57);
+			this.address.TabIndex = 20;
 			// 
-			// textBox3
+			// city
 			// 
-			this.textBox3.Location = new System.Drawing.Point(126, 114);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(131, 20);
-			this.textBox3.TabIndex = 19;
+			this.city.Location = new System.Drawing.Point(126, 114);
+			this.city.Name = "city";
+			this.city.Size = new System.Drawing.Size(131, 20);
+			this.city.TabIndex = 19;
 			// 
-			// textBox2
+			// lastname
 			// 
-			this.textBox2.Location = new System.Drawing.Point(126, 57);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(132, 20);
-			this.textBox2.TabIndex = 18;
+			this.lastname.Location = new System.Drawing.Point(126, 57);
+			this.lastname.Name = "lastname";
+			this.lastname.Size = new System.Drawing.Size(132, 20);
+			this.lastname.TabIndex = 18;
 			// 
-			// textBox1
+			// firstname
 			// 
-			this.textBox1.Location = new System.Drawing.Point(126, 27);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(132, 20);
-			this.textBox1.TabIndex = 17;
+			this.firstname.Location = new System.Drawing.Point(126, 27);
+			this.firstname.Name = "firstname";
+			this.firstname.Size = new System.Drawing.Size(132, 20);
+			this.firstname.TabIndex = 17;
 			// 
 			// label5
 			// 
@@ -165,10 +166,10 @@ namespace Lenders
 			this.Controls.Add(this.dateTimePicker1);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.textBox4);
-			this.Controls.Add(this.textBox3);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.address);
+			this.Controls.Add(this.city);
+			this.Controls.Add(this.lastname);
+			this.Controls.Add(this.firstname);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
@@ -179,14 +180,20 @@ namespace Lenders
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		public System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button button1;
+		public System.Windows.Forms.TextBox address;
+		public System.Windows.Forms.TextBox city;
+		public System.Windows.Forms.TextBox lastname;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
+		public System.Windows.Forms.TextBox firstname;
+		private System.Windows.Forms.TlastnameextBox2;
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.TextBox textBox4;
 		private System.Windows.Forms.Button button1;
