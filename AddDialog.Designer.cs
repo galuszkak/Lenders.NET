@@ -6,6 +6,10 @@
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
+using System.Collections.Generic;
+using System.Linq;
+using Db4objects.Db4o.Linq;
+
 namespace Lenders
 {
 	partial class AddDialog
@@ -96,11 +100,9 @@ namespace Lenders
 			this.TypeBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.TypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.TypeBox.FormattingEnabled = true;
-			this.TypeBox.Items.AddRange(new object[] {
-									"Książka",
-									"Video",
-									"Płyty",
-									"Gry"});
+			IEnumerable<ItemType> items = from ItemType i in DBConnection.Instance.DB select i;
+			object[] items_object = items.Cast<ItemType>().ToArray();
+			this.TypeBox.Items.AddRange(items_object);
 			this.TypeBox.Location = new System.Drawing.Point(111, 5);
 			this.TypeBox.Name = "TypeBox";
 			this.TypeBox.Size = new System.Drawing.Size(134, 21);

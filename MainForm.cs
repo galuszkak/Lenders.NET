@@ -71,7 +71,9 @@ namespace Lenders
 				foreach(Item item in items)
 				{
 					ListViewItem lvItem  = new ListViewItem(item.type.Name);
-					
+					lvItem.SubItems.Add(item.Title);
+					lvItem.SubItems.Add(item.BuyDate.ToString());
+					lvItem.SubItems.Add(item.Price.ToString());
 					listView1.Items.Add(lvItem);
 				}
 			}
@@ -98,7 +100,9 @@ namespace Lenders
 		{
 			ManageItemDialog dlg = new ManageItemDialog();
 			dlg.ShowDialog();
+			
 		}
+		
 		
 		void ManageToolStripMenuItemClick(object sender, EventArgs e)
 		{

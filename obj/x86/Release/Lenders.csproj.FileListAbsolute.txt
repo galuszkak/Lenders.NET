@@ -9,3 +9,16 @@ C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Le
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.AddPeopleDialog.resources
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.dll
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.xml
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.ManagePeopleDialog.resources
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.PeopleListDialog.resources
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.Linq.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.NativeQueries.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.Optional.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Mono.Reflection.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Cecil.FlowAnalysis.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Mono.Cecil.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.Instrumentation.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.Linq.xml
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.NativeQueries.xml
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.Optional.xml
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.Instrumentation.xml
