@@ -35,7 +35,7 @@ namespace Lenders
 		}
 		void refreshItems(){
 			IEnumerable<Item> items = from Item i in DBConnection.Instance.DB select i;
-			
+			listView1.Clear();
 			foreach(Item i in items){
 				ListViewItem lvi = new ListViewItem();
 				lvi.Text = i.type.Name;
@@ -120,9 +120,6 @@ namespace Lenders
 					String item = dlg2.listView1.SelectedItems.ToString();
 					dlg.address.Text = item;
 					
-					
-					
-					
 				}
 			}
 		}
@@ -147,6 +144,7 @@ namespace Lenders
 		{
 			ListView.SelectedListViewItemCollection list = this.listView1.SelectedItems;
 			ManageItemDialog dlg = new ManageItemDialog();
+			ListView c;
 			
 			ListViewItem item = list[0];
 			dlg.TypeBox.Text = item.SubItems[0].Text;
@@ -154,9 +152,19 @@ namespace Lenders
 			dlg.BuyDatePicker.Value = DateTime.Parse(item.SubItems[2].Text);
 			dlg.Price.Value = decimal.Parse(item.SubItems[3].Text);
 			dlg.PlaceBox.Text = item.SubItems[4].Text;
+			IEnumerable<Item> result = from Item i in DBConnection.Instance.DB where i.Title.Equals(item.SubItems[1].Text) && i.type.Name.Equals(item.SubItems[0].Text) select i;
 			if (dlg.ShowDialog() == DialogResult.OK)
 			{
-				
+				foreach(Item it in result){
+				it.type = new ItemType(dlg.TypeBox.Text);
+				it.Title = dlg.TitleBox.Text;
+			    it.BuyDate = dlg.BuyDatePicker.Value;
+	
+			    it.Price = (float)dlg.Price.Value;
+				it.Place = dlg.PlaceBox.Text;
+				DBConnection.Instance.DB.Store(it);
+				}
+				this.refreshItems();
 			
 			}
 			

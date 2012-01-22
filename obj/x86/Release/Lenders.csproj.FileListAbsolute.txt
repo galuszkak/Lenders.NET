@@ -24,3 +24,10 @@ C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4obj
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.Instrumentation.xml
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.ManageItemDialog.resources
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.AddItemTypeDialog.resources
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.CS.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\DB4objects.Db4o.CS.Optional.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.Data.Services.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4oTool.exe
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Mono.GetOptions.dll
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.CS.xml
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\DB4objects.Db4o.CS.Optional.xml
