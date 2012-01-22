@@ -67,9 +67,11 @@ namespace Lenders
 									this.columnHeader3,
 									this.columnHeader4,
 									this.columnHeader5});
+			this.listView1.FullRowSelect = true;
 			this.listView1.Location = new System.Drawing.Point(0, 32);
+			this.listView1.MultiSelect = false;
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(531, 199);
+			this.listView1.Size = new System.Drawing.Size(520, 199);
 			this.listView1.TabIndex = 2;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -103,7 +105,7 @@ namespace Lenders
 			// button1
 			// 
 			this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.button1.Location = new System.Drawing.Point(316, 285);
+			this.button1.Location = new System.Drawing.Point(316, 297);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 3;
@@ -113,7 +115,7 @@ namespace Lenders
 			// button2
 			// 
 			this.button2.DialogResult = System.Windows.Forms.DialogResult.Yes;
-			this.button2.Location = new System.Drawing.Point(224, 285);
+			this.button2.Location = new System.Drawing.Point(221, 297);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(75, 23);
 			this.button2.TabIndex = 4;
@@ -123,7 +125,7 @@ namespace Lenders
 			// button3
 			// 
 			this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.button3.Location = new System.Drawing.Point(121, 285);
+			this.button3.Location = new System.Drawing.Point(121, 297);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(83, 23);
 			this.button3.TabIndex = 5;
@@ -132,14 +134,14 @@ namespace Lenders
 			// 
 			// dateTimePicker1
 			// 
-			this.dateTimePicker1.Location = new System.Drawing.Point(176, 247);
+			this.dateTimePicker1.Location = new System.Drawing.Point(77, 251);
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
 			this.dateTimePicker1.TabIndex = 6;
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(99, 251);
+			this.label2.Location = new System.Drawing.Point(0, 251);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(71, 23);
 			this.label2.TabIndex = 7;
