@@ -97,13 +97,13 @@ namespace Lenders
 				AddPeopleDialog dlg = new AddPeopleDialog();
 				if (dlg.ShowDialog() == DialogResult.OK)
 				{
-				String firstname = dlg.firstname.Text;
-				String lastname = dlg.lastname.Text;
-				DateTime dateofbirth = dlg.dateTimePicker1.Value;
-				String city = dlg.city.Text;
-				String address = dlg.address.Text;
-				IObjectContainer db = DBConnection.Instance.DB;
-				db.Store(new Lender(firstname,lastname,dateofbirth,city,address));
+					String firstname = dlg.firstname.Text;
+					String lastname = dlg.lastname.Text;
+					DateTime dateofbirth = dlg.dateTimePicker1.Value;
+					String city = dlg.city.Text;
+					String address = dlg.address.Text;
+					IObjectContainer db = DBConnection.Instance.DB;
+					db.Store(new Lender(firstname,lastname,dateofbirth,city,address));
 				}
 		}
 		
@@ -204,34 +204,44 @@ namespace Lenders
 		{
 			BorrowDialog dlg = new BorrowDialog();
 			ListView.SelectedListViewItemCollection list = this.listView1.SelectedItems;
-			
-			ListViewItem item = list[0];
-			IEnumerable<Item> result = from Item i in DBConnection.Instance.DB where i.Title.Equals(item.SubItems[1].Text) && i.type.Name.Equals(item.SubItems[0].Text) select i;
-			if (dlg.ShowDialog() == DialogResult.OK)
-			{
-				ListView.SelectedListViewItemCollection listp = dlg.listView1.SelectedItems;
-				ListViewItem itemp = listp[0];
-				IEnumerable<Lender> resultp = from Lender j in DBConnection.Instance.DB where j.FirstName.Equals(itemp.SubItems[0].Text) && j.LastName.Equals(itemp.SubItems[1].Text) select j;
-				foreach(Lender ln in resultp) {
-					foreach(Item it in result){
-					it.Lender = ln;
-					it.IsBorrow = true;
-					it.BorrowDate = dlg.dateTimePicker1.Value;
-					DBConnection.Instance.DB.Store(it);
+			if(list.Count == 0){
+				MessageBox.Show("What you want to borrow? There is nothing selected");
+			}
+			else{
+				ListViewItem item = list[0];
+				IEnumerable<Item> result = from Item i in DBConnection.Instance.DB where i.Title.Equals(item.SubItems[1].Text) && i.type.Name.Equals(item.SubItems[0].Text) select i;
+				if (dlg.ShowDialog() == DialogResult.OK)
+				{
+					ListView.SelectedListViewItemCollection listp = dlg.listView1.SelectedItems;
+					if(listp.Count == 0){
+						MessageBox.Show("Who you want to borrow? There is none selected");
+					}
+					else{
+						ListViewItem itemp = listp[0];
+						IEnumerable<Lender> resultp = from Lender j in DBConnection.Instance.DB where j.FirstName.Equals(itemp.SubItems[0].Text) && j.LastName.Equals(itemp.SubItems[1].Text) select j;
+						foreach(Lender ln in resultp) {
+							foreach(Item it in result){
+							it.Lender = ln;
+							it.IsBorrow = true;
+							it.BorrowDate = dlg.dateTimePicker1.Value;
+							DBConnection.Instance.DB.Store(it);
+							}
+						}
+					this.refreshItems();
 					}
 				}
-				this.refreshItems();
-			
-			}
-			else if (dlg.DialogResult.Equals(DialogResult.Yes))
-			{
-				foreach(Item it in result){
-				it.IsBorrow = false;
-				DBConnection.Instance.DB.Store(it);
+				else if (dlg.DialogResult.Equals(DialogResult.Yes))
+				{
+					
+					foreach(Item it in result){
+					it.IsBorrow = false;
+					DBConnection.Instance.DB.Store(it);
+					}
+					this.refreshItems();
+					}
 				}
-				this.refreshItems();
 			}
-		}
+		
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
