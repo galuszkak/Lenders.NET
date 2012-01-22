@@ -46,7 +46,10 @@ namespace Lenders
 				lvi.SubItems.Add(i.Place.ToString());
 				lvi.SubItems.Add(i.IsBorrow.ToString());
 				if(i.IsBorrow) //condition to show borrowdate
-				lvi.SubItems.Add(i.BorrowDate.ToString());
+				{
+					lvi.SubItems.Add(i.BorrowDate.ToString());
+					lvi.SubItems.Add(i.Lender.ToString());
+				}
 				listView1.Items.Add(lvi);
 			}
 			
@@ -198,10 +201,16 @@ namespace Lenders
 			IEnumerable<Item> result = from Item i in DBConnection.Instance.DB where i.Title.Equals(item.SubItems[1].Text) && i.type.Name.Equals(item.SubItems[0].Text) select i;
 			if (dlg.ShowDialog() == DialogResult.OK)
 			{
-				foreach(Item it in result){
-				it.IsBorrow = true;
-				it.BorrowDate = dlg.dateTimePicker1.Value;
-				DBConnection.Instance.DB.Store(it);
+				ListView.SelectedListViewItemCollection listp = dlg.listView1.SelectedItems;
+				ListViewItem itemp = listp[0];
+				IEnumerable<Lender> resultp = from Lender j in DBConnection.Instance.DB where j.FirstName.Equals(itemp.SubItems[0].Text) && j.LastName.Equals(itemp.SubItems[1].Text) select j;
+				foreach(Lender ln in resultp) {
+					foreach(Item it in result){
+					it.Lender = ln;
+					it.IsBorrow = true;
+					it.BorrowDate = dlg.dateTimePicker1.Value;
+					DBConnection.Instance.DB.Store(it);
+					}
 				}
 				this.refreshItems();
 			
