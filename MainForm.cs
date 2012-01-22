@@ -175,7 +175,8 @@ namespace Lenders
 			dlg.Price.Value = decimal.Parse(item.SubItems[3].Text);
 			dlg.PlaceBox.Text = item.SubItems[4].Text;
 			IEnumerable<Item> result = from Item i in DBConnection.Instance.DB where i.Title.Equals(item.SubItems[1].Text) && i.type.Name.Equals(item.SubItems[0].Text) select i;
-			if (dlg.ShowDialog() == DialogResult.OK)
+			DialogResult res = dlg.ShowDialog();
+			if ( res== DialogResult.OK)
 			{
 				foreach(Item it in result){
 				it.type = new ItemType(dlg.TypeBox.Text);
@@ -188,6 +189,13 @@ namespace Lenders
 				}
 				this.refreshItems();
 			
+			}
+			else if( res == DialogResult.No){
+				foreach(Item it in result){
+					DBConnection.Instance.DB.Delete(it);
+					this.refreshItems();
+				}
+				
 			}
 			
 		}
