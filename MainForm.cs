@@ -219,5 +219,11 @@ namespace Lenders
 		void MainFormLoad(object sender, EventArgs e)
 		{
 		}
+		
+		void NewToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			DBConnection.clearDatabase();
+			this.refreshItems();
+		}
 	}
 }
