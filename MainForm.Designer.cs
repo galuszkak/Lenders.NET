@@ -57,10 +57,7 @@ namespace Lenders
 			this.Place = new System.Windows.Forms.ColumnHeader();
 			this.IsBorrow = new System.Windows.Forms.ColumnHeader();
 			this.BorrowDate = new System.Windows.Forms.ColumnHeader();
-<<<<<<< HEAD
-=======
 			this.Lender = new System.Windows.Forms.ColumnHeader();
->>>>>>> ed9b3b532a96bef94850a0801bff783cb0bf395a
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -104,14 +101,11 @@ namespace Lenders
 			// newToolStripMenuItem
 			// 
 			this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-<<<<<<< HEAD
 			this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.newToolStripMenuItem.Text = "New";
 			this.newToolStripMenuItem.Click += new System.EventHandler(this.NewToolStripMenuItemClick);
-=======
 			this.newToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
 			this.newToolStripMenuItem.Text = "New";
->>>>>>> ed9b3b532a96bef94850a0801bff783cb0bf395a
 			// 
 			// recordsToolStripMenuItem
 			// 
@@ -229,14 +223,11 @@ namespace Lenders
 			this.BorrowDate.Text = "Borrow Date";
 			this.BorrowDate.Width = 94;
 			// 
-<<<<<<< HEAD
-=======
 			// Lender
 			// 
 			this.Lender.Text = "Lender";
 			this.Lender.Width = 109;
 			// 
->>>>>>> ed9b3b532a96bef94850a0801bff783cb0bf395a
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
