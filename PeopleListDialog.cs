@@ -44,7 +44,7 @@ namespace Lenders
 					lvItem.SubItems.Add(lender.BirthDate.ToString());
 					lvItem.SubItems.Add(lender.City);
 					lvItem.SubItems.Add(lender.Address);
-					listView1.Items.Add(lvItem);
+					listView1.Items.Add(lvItem); 
 				}
 			
 		}

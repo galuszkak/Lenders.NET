@@ -54,6 +54,9 @@ namespace Lenders
 			this.DateOfPurchase = new System.Windows.Forms.ColumnHeader();
 			this.Value = new System.Windows.Forms.ColumnHeader();
 			this.Place = new System.Windows.Forms.ColumnHeader();
+			this.IsBorrow = new System.Windows.Forms.ColumnHeader();
+			this.BorrowDate = new System.Windows.Forms.ColumnHeader();
+			this.borrowUnborrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -62,10 +65,11 @@ namespace Lenders
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.fileToolStripMenuItem,
 									this.recordsToolStripMenuItem,
-									this.peopleToolStripMenuItem});
+									this.peopleToolStripMenuItem,
+									this.borrowUnborrowToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(519, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(603, 24);
 			this.menuStrip1.TabIndex = 0;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -162,11 +166,13 @@ namespace Lenders
 									this.Title,
 									this.DateOfPurchase,
 									this.Value,
-									this.Place});
+									this.Place,
+									this.IsBorrow,
+									this.BorrowDate});
 			this.listView1.FullRowSelect = true;
 			this.listView1.Location = new System.Drawing.Point(0, 27);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(520, 223);
+			this.listView1.Size = new System.Drawing.Size(603, 223);
 			this.listView1.TabIndex = 2;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -190,17 +196,33 @@ namespace Lenders
 			// Value
 			// 
 			this.Value.Text = "Value";
-			this.Value.Width = 103;
+			this.Value.Width = 69;
 			// 
 			// Place
 			// 
 			this.Place.Text = "Place";
 			// 
+			// IsBorrow
+			// 
+			this.IsBorrow.Text = "Borrowed";
+			// 
+			// BorrowDate
+			// 
+			this.BorrowDate.Text = "Borrow Date";
+			this.BorrowDate.Width = 94;
+			// 
+			// borrowUnborrowToolStripMenuItem
+			// 
+			this.borrowUnborrowToolStripMenuItem.Name = "borrowUnborrowToolStripMenuItem";
+			this.borrowUnborrowToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+			this.borrowUnborrowToolStripMenuItem.Text = "Borrow/Unborrow";
+			this.borrowUnborrowToolStripMenuItem.Click += new System.EventHandler(this.BorrowUnborrowToolStripMenuItemClick);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(519, 252);
+			this.ClientSize = new System.Drawing.Size(603, 252);
 			this.Controls.Add(this.listView1);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
@@ -212,6 +234,9 @@ namespace Lenders
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripMenuItem borrowUnborrowToolStripMenuItem;
+		private System.Windows.Forms.ColumnHeader BorrowDate;
+		private System.Windows.Forms.ColumnHeader IsBorrow;
 		private System.Windows.Forms.ColumnHeader Place;
 		private System.Windows.Forms.ToolStripMenuItem addItemTypeToolStripMenuItem;
 		private System.Windows.Forms.MenuStrip menuStrip1;

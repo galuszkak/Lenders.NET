@@ -36,3 +36,4 @@ D:\Lenders\Lenders\Lenders\bin\Debug\Db4objects.Db4o.NativeQueries.xml
 D:\Lenders\Lenders\Lenders\bin\Debug\Db4objects.Db4o.Optional.xml
 D:\Lenders\Lenders\Lenders\bin\Debug\Db4objects.Db4o.Instrumentation.xml
 D:\Lenders\Lenders\Lenders\obj\x86\Debug\Lenders.AddItemTypeDialog.resources
+D:\Lenders\Lenders\Lenders\obj\x86\Debug\Lenders.BorrowDialog.resources

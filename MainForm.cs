@@ -44,6 +44,9 @@ namespace Lenders
 				lvi.SubItems.Add(i.BuyDate.ToString());
 				lvi.SubItems.Add(i.Price.ToString());
 				lvi.SubItems.Add(i.Place.ToString());
+				lvi.SubItems.Add(i.IsBorrow.ToString());
+				if(i.IsBorrow) //condition to show borrowdate
+				lvi.SubItems.Add(i.BorrowDate.ToString());
 				listView1.Items.Add(lvi);
 				
 			}
@@ -169,6 +172,12 @@ namespace Lenders
 			
 			}
 			
+		}
+		
+		void BorrowUnborrowToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			BorrowDialog dlg = new BorrowDialog();
+			dlg.ShowDialog();
 		}
 	}
 }
