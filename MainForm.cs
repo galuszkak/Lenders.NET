@@ -148,7 +148,6 @@ namespace Lenders
 		{
 			ListView.SelectedListViewItemCollection list = this.listView1.SelectedItems;
 			ManageItemDialog dlg = new ManageItemDialog();
-		//	ListView c;
 			
 			ListViewItem item = list[0];
 			dlg.TypeBox.Text = item.SubItems[0].Text;
@@ -177,7 +176,28 @@ namespace Lenders
 		void BorrowUnborrowToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			BorrowDialog dlg = new BorrowDialog();
-			dlg.ShowDialog();
+			ListView.SelectedListViewItemCollection list = this.listView1.SelectedItems;
+			
+			ListViewItem item = list[0];
+			IEnumerable<Item> result = from Item i in DBConnection.Instance.DB where i.Title.Equals(item.SubItems[1].Text) && i.type.Name.Equals(item.SubItems[0].Text) select i;
+			if (dlg.ShowDialog() == DialogResult.OK)
+			{
+				foreach(Item it in result){
+				it.IsBorrow = true;
+				it.BorrowDate = dlg.dateTimePicker1.Value;
+				DBConnection.Instance.DB.Store(it);
+				}
+				this.refreshItems();
+			
+			}
+			else if (dlg.DialogResult.Equals(DialogResult.Yes))
+			{
+				foreach(Item it in result){
+				it.IsBorrow = false;
+				DBConnection.Instance.DB.Store(it);
+				}
+				this.refreshItems();
+			}
 		}
 	}
 }
