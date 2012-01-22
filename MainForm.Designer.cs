@@ -43,7 +43,6 @@ namespace Lenders
 			this.recordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.removeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.manageToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.addItemTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.peopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +56,7 @@ namespace Lenders
 			this.Place = new System.Windows.Forms.ColumnHeader();
 			this.IsBorrow = new System.Windows.Forms.ColumnHeader();
 			this.BorrowDate = new System.Windows.Forms.ColumnHeader();
+			this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -77,7 +77,8 @@ namespace Lenders
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.saveToolStripMenuItem,
-									this.openToolStripMenuItem});
+									this.openToolStripMenuItem,
+									this.newToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
 			this.fileToolStripMenuItem.Text = "File";
@@ -85,14 +86,14 @@ namespace Lenders
 			// saveToolStripMenuItem
 			// 
 			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.saveToolStripMenuItem.Text = "Save";
 			this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItemClick);
 			// 
 			// openToolStripMenuItem
 			// 
 			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.openToolStripMenuItem.Text = "Open";
 			this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItemClick);
 			// 
@@ -101,7 +102,6 @@ namespace Lenders
 			this.recordsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.addToolStripMenuItem,
 									this.removeToolStripMenuItem1,
-									this.manageToolStripMenuItem1,
 									this.addItemTypeToolStripMenuItem});
 			this.recordsToolStripMenuItem.Name = "recordsToolStripMenuItem";
 			this.recordsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
@@ -120,13 +120,6 @@ namespace Lenders
 			this.removeToolStripMenuItem1.Name = "removeToolStripMenuItem1";
 			this.removeToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
 			this.removeToolStripMenuItem1.Text = "Remove";
-			// 
-			// manageToolStripMenuItem1
-			// 
-			this.manageToolStripMenuItem1.Name = "manageToolStripMenuItem1";
-			this.manageToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
-			this.manageToolStripMenuItem1.Text = "Manage";
-			this.manageToolStripMenuItem1.Click += new System.EventHandler(this.ManageToolStripMenuItem1Click);
 			// 
 			// addItemTypeToolStripMenuItem
 			// 
@@ -219,6 +212,12 @@ namespace Lenders
 			this.BorrowDate.Text = "Borrow Date";
 			this.BorrowDate.Width = 94;
 			// 
+			// newToolStripMenuItem
+			// 
+			this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+			this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.newToolStripMenuItem.Text = "New";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +235,7 @@ namespace Lenders
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem borrowUnborrowToolStripMenuItem;
 		private System.Windows.Forms.ColumnHeader BorrowDate;
 		private System.Windows.Forms.ColumnHeader IsBorrow;
@@ -253,7 +253,6 @@ namespace Lenders
 		private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem peopleToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
