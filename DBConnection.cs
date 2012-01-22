@@ -7,6 +7,7 @@
  * created by KGaluszka
  */
 using System;
+using System.IO;
 using Db4objects.Db4o;
 using Db4objects.Db4o.Ext;
 using Db4objects.Db4o.Config;
@@ -32,6 +33,13 @@ namespace Lenders
 				_db.Close();
 			}
 			_db = Db4oEmbedded.OpenFile(path);
+		}
+		public static void clearDatabase(){
+			if(_db != null){
+				_db.Close();
+			}
+			File.Delete(@"database.db");
+			_db = Db4oEmbedded.OpenFile(@"database.db");
 		}
 		public static void saveDatabase(string path){
 			if(_db != null){
