@@ -144,8 +144,6 @@ namespace Lenders
 		{
 			ListView.SelectedListViewItemCollection list = this.listView1.SelectedItems;
 			ManageItemDialog dlg = new ManageItemDialog();
-			ListView c;
-			
 			ListViewItem item = list[0];
 			dlg.TypeBox.Text = item.SubItems[0].Text;
 			dlg.TitleBox.Text = item.SubItems[1].Text;
