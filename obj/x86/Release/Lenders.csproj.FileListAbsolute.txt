@@ -31,3 +31,4 @@ C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4oTo
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Mono.GetOptions.dll
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\Db4objects.Db4o.CS.xml
 C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\bin\Release\DB4objects.Db4o.CS.Optional.xml
+C:\Users\user\Documents\SharpDevelop Projects\Lenders\Lenders\obj\x86\Release\Lenders.BorrowDialog.resources
