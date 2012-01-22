@@ -48,7 +48,6 @@ namespace Lenders
 				if(i.IsBorrow) //condition to show borrowdate
 				lvi.SubItems.Add(i.BorrowDate.ToString());
 				listView1.Items.Add(lvi);
-				
 			}
 			
 		}
@@ -118,15 +117,33 @@ namespace Lenders
 			PeopleListDialog dlg2 = new PeopleListDialog();
 			if (dlg2.ShowDialog() == DialogResult.OK)
 			{
+				
 				ManagePeopleDialog dlg = new ManagePeopleDialog();
-				if (dlg.ShowDialog() == DialogResult.OK)
+				
+				ListView.SelectedListViewItemCollection list = dlg2.listView1.SelectedItems;
+				ListViewItem item = list[0];
+				dlg.firstname.Text = item.SubItems[0].Text;
+				dlg.lastname.Text = item.SubItems[1].Text;
+				dlg.dateTimePicker1.Value = DateTime.Parse(item.SubItems[2].Text);
+				dlg.city.Text = item.SubItems[3].Text;
+				dlg.address.Text = item.SubItems[4].Text;;
+				IEnumerable<Lender> result = from Lender i in DBConnection.Instance.DB where i.FirstName.Equals(item.SubItems[0].Text) && i.LastName.Equals(item.SubItems[1].Text) select i;
+				if (dlg.ShowDialog() == DialogResult.OK)		
 				{
-					String item = dlg2.listView1.SelectedItems.ToString();
-					dlg.address.Text = item;
+					foreach(Lender it in result){
+					it.FirstName = dlg.firstname.Text;
+					it.LastName = dlg.lastname.Text;
+					it.BirthDate = dlg.dateTimePicker1.Value;
+					it.City = dlg.city.Text;
+					it.Address = dlg.address.Text;
+					DBConnection.Instance.DB.Store(it);
+					}
+			
+				}
 					
 				}
 			}
-		}
+	
 		
 		void AddItemTypeToolStripMenuItemClick(object sender, EventArgs e)
 		{
@@ -198,6 +215,10 @@ namespace Lenders
 				}
 				this.refreshItems();
 			}
+		}
+		
+		void MainFormLoad(object sender, EventArgs e)
+		{
 		}
 	}
 }

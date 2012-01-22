@@ -48,6 +48,7 @@ namespace Lenders
 			this.peopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.borrowUnborrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.listView1 = new System.Windows.Forms.ListView();
 			this.Type = new System.Windows.Forms.ColumnHeader();
 			this.Title = new System.Windows.Forms.ColumnHeader();
@@ -56,7 +57,6 @@ namespace Lenders
 			this.Place = new System.Windows.Forms.ColumnHeader();
 			this.IsBorrow = new System.Windows.Forms.ColumnHeader();
 			this.BorrowDate = new System.Windows.Forms.ColumnHeader();
-			this.borrowUnborrowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -158,6 +158,13 @@ namespace Lenders
 			this.manageToolStripMenuItem.Text = "Manage";
 			this.manageToolStripMenuItem.Click += new System.EventHandler(this.ManageToolStripMenuItemClick);
 			// 
+			// borrowUnborrowToolStripMenuItem
+			// 
+			this.borrowUnborrowToolStripMenuItem.Name = "borrowUnborrowToolStripMenuItem";
+			this.borrowUnborrowToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+			this.borrowUnborrowToolStripMenuItem.Text = "Borrow/Unborrow";
+			this.borrowUnborrowToolStripMenuItem.Click += new System.EventHandler(this.BorrowUnborrowToolStripMenuItemClick);
+			// 
 			// listView1
 			// 
 			this.listView1.Activation = System.Windows.Forms.ItemActivation.TwoClick;
@@ -171,6 +178,7 @@ namespace Lenders
 									this.BorrowDate});
 			this.listView1.FullRowSelect = true;
 			this.listView1.Location = new System.Drawing.Point(0, 27);
+			this.listView1.MultiSelect = false;
 			this.listView1.Name = "listView1";
 			this.listView1.Size = new System.Drawing.Size(603, 223);
 			this.listView1.TabIndex = 2;
@@ -211,13 +219,6 @@ namespace Lenders
 			this.BorrowDate.Text = "Borrow Date";
 			this.BorrowDate.Width = 94;
 			// 
-			// borrowUnborrowToolStripMenuItem
-			// 
-			this.borrowUnborrowToolStripMenuItem.Name = "borrowUnborrowToolStripMenuItem";
-			this.borrowUnborrowToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-			this.borrowUnborrowToolStripMenuItem.Text = "Borrow/Unborrow";
-			this.borrowUnborrowToolStripMenuItem.Click += new System.EventHandler(this.BorrowUnborrowToolStripMenuItemClick);
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,6 +229,7 @@ namespace Lenders
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "MainForm";
 			this.Text = "Lenders";
+			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.DoubleClick += new System.EventHandler(this.MainFormDoubleClick);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
