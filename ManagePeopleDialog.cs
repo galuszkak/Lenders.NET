@@ -37,5 +37,10 @@ namespace Lenders
 		{
 			
 		}
+		
+		void ManagePeopleDialogLoad(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }

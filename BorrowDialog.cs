@@ -1,27 +1,26 @@
 ﻿/*
  * Created by SharpDevelop.
  * User: User
- * Date: 2012-01-21
- * Time: 18:55
+ * Date: 2012-01-22
+ * Time: 03:05
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using Db4objects;
 using Db4objects.Db4o.Linq;
 using System.Linq;
-
+using System.Collections.Generic;
 namespace Lenders
 {
 	/// <summary>
-	/// Description of PeopleListDialog.
+	/// Description of BorrowDialogcs.
 	/// </summary>
-	public partial class PeopleListDialog : Form
+	public partial class BorrowDialog : Form
 	{
-		public PeopleListDialog()
+		public BorrowDialog()
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
@@ -31,12 +30,21 @@ namespace Lenders
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
-
 		}
 		
-		void PeopleListDialogLoad(object sender, EventArgs e)
+		void Label1Click(object sender, EventArgs e)
 		{
-			IEnumerable<Lender> lenders = from Lender l in DBConnection.Instance.DB select l;
+			
+		}
+		
+		void ListView1SelectedIndexChanged(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void BorrowDialogLoad(object sender, EventArgs e)
+		{
+				IEnumerable<Lender> lenders = from Lender l in DBConnection.Instance.DB select l;
 				foreach(Lender lender in lenders)
 				{
 					ListViewItem lvItem  = new ListViewItem(lender.FirstName);
@@ -46,12 +54,6 @@ namespace Lenders
 					lvItem.SubItems.Add(lender.Address);
 					listView1.Items.Add(lvItem); 
 				}
-			
-		}
-		
-		void Button1Click(object sender, EventArgs e)
-		{
-
 		}
 	}
 }
