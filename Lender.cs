@@ -71,5 +71,10 @@ namespace Lenders
 				_address = value;
 			}
 		}
+		
+		public string ToString(){
+			
+			return (this.FirstName+" "+this.LastName);
+		}
 	}
 }
