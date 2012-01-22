@@ -35,7 +35,8 @@ namespace Lenders
 		}
 		void refreshItems(){
 			IEnumerable<Item> items = from Item i in DBConnection.Instance.DB select i;
-			listView1.Clear();
+		//	listView1.Clear(); Tu byl blad, czyscilo caly komponent
+			listView1.Items.Clear();
 			foreach(Item i in items){
 				ListViewItem lvi = new ListViewItem();
 				lvi.Text = i.type.Name;
@@ -144,7 +145,7 @@ namespace Lenders
 		{
 			ListView.SelectedListViewItemCollection list = this.listView1.SelectedItems;
 			ManageItemDialog dlg = new ManageItemDialog();
-			ListView c;
+		//	ListView c;
 			
 			ListViewItem item = list[0];
 			dlg.TypeBox.Text = item.SubItems[0].Text;

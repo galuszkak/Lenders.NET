@@ -75,20 +75,20 @@ namespace Lenders
 									this.saveToolStripMenuItem,
 									this.openToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
 			this.fileToolStripMenuItem.Text = "File";
 			// 
 			// saveToolStripMenuItem
 			// 
 			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
 			this.saveToolStripMenuItem.Text = "Save";
 			this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItemClick);
 			// 
 			// openToolStripMenuItem
 			// 
 			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
 			this.openToolStripMenuItem.Text = "Open";
 			this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItemClick);
 			// 
@@ -100,34 +100,34 @@ namespace Lenders
 									this.manageToolStripMenuItem1,
 									this.addItemTypeToolStripMenuItem});
 			this.recordsToolStripMenuItem.Name = "recordsToolStripMenuItem";
-			this.recordsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+			this.recordsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
 			this.recordsToolStripMenuItem.Text = "Items";
 			this.recordsToolStripMenuItem.Click += new System.EventHandler(this.RecordsToolStripMenuItemClick);
 			// 
 			// addToolStripMenuItem
 			// 
 			this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-			this.addToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.addToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
 			this.addToolStripMenuItem.Text = "Add";
 			this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItemClick);
 			// 
 			// removeToolStripMenuItem1
 			// 
 			this.removeToolStripMenuItem1.Name = "removeToolStripMenuItem1";
-			this.removeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+			this.removeToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
 			this.removeToolStripMenuItem1.Text = "Remove";
 			// 
 			// manageToolStripMenuItem1
 			// 
 			this.manageToolStripMenuItem1.Name = "manageToolStripMenuItem1";
-			this.manageToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+			this.manageToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
 			this.manageToolStripMenuItem1.Text = "Manage";
 			this.manageToolStripMenuItem1.Click += new System.EventHandler(this.ManageToolStripMenuItem1Click);
 			// 
 			// addItemTypeToolStripMenuItem
 			// 
 			this.addItemTypeToolStripMenuItem.Name = "addItemTypeToolStripMenuItem";
-			this.addItemTypeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.addItemTypeToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
 			this.addItemTypeToolStripMenuItem.Text = "Add Item Type";
 			this.addItemTypeToolStripMenuItem.Click += new System.EventHandler(this.AddItemTypeToolStripMenuItemClick);
 			// 
@@ -137,20 +137,20 @@ namespace Lenders
 									this.addToolStripMenuItem1,
 									this.manageToolStripMenuItem});
 			this.peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
-			this.peopleToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+			this.peopleToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
 			this.peopleToolStripMenuItem.Text = "People";
 			// 
 			// addToolStripMenuItem1
 			// 
 			this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
-			this.addToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
+			this.addToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
 			this.addToolStripMenuItem1.Text = "Add";
 			this.addToolStripMenuItem1.Click += new System.EventHandler(this.AddToolStripMenuItem1Click);
 			// 
 			// manageToolStripMenuItem
 			// 
 			this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-			this.manageToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+			this.manageToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
 			this.manageToolStripMenuItem.Text = "Manage";
 			this.manageToolStripMenuItem.Click += new System.EventHandler(this.ManageToolStripMenuItemClick);
 			// 
@@ -218,7 +218,7 @@ namespace Lenders
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem recordsToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
-		private System.Windows.Forms.ListView listView1;
+		public System.Windows.Forms.ListView listView1;
 		private System.Windows.Forms.ColumnHeader Type;
 		private System.Windows.Forms.ColumnHeader Title;
 		private System.Windows.Forms.ColumnHeader DateOfPurchase;
